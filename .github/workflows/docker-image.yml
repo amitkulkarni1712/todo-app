@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Login to Docker Hub
+    - name: Login to Docker Hub 
       uses: docker/login-action@v1
       with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -29,5 +29,5 @@ jobs:
       run: docker push amitkulkarni1712/todo-flask:${{steps.vars.outputs.tag}}
     - name: Build the latest Docker image
       run: docker build . --file Dockerfile --tag amitkulkarni1712/todo-flask:latest
-    - name: Push the latest Docker image
+    - name: Push the latest Docker image to hub
       run: docker push amitkulkarni1712/todo-flask:latest
