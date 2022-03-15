@@ -25,6 +25,6 @@ jobs:
       with:
         repository: amitkulkarni1712/todo-helm-chart
     - name: List files 
-      run: 'cd .. && ls -l'
+      run: 'cd ../.. && ls -l'
         
     
